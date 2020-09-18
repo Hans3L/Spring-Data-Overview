@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository("flightRepository")
-public interface FlightRepository extends PagingAndSortingRepository<FlightEntity,Long> {
+public interface FlightRepository extends PagingAndSortingRepository<FlightEntity,String> {
 
     List<FlightEntity> findByOrigin(String origin);
 

@@ -1,21 +1,14 @@
 package com.creativity.springdataoverview.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "TBL_FLIGHT")
 public class FlightEntity implements Serializable {
 
     private static final long serialVersionUID = -864252247544008041L;
 
-    @Id
-    @GeneratedValue
-    private Long id;
+    private String id;
 
     private String origin;
 
@@ -26,18 +19,18 @@ public class FlightEntity implements Serializable {
     public FlightEntity() {
     }
 
-    public FlightEntity(Long id, String origin, String destination, LocalDateTime scheduledAt) {
+    public FlightEntity(String id, String origin, String destination, LocalDateTime scheduledAt) {
         this.id = id;
         this.origin = origin;
         this.destination = destination;
         this.scheduledAt = scheduledAt;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
